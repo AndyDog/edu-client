@@ -13,7 +13,7 @@ const adminList = [
     meta: {
       title: 'router.dashboard',
       icon: 'ant-design:dashboard-filled',
-      alwaysShow: true
+      alwaysShow: false
     },
     children: [
       {
@@ -25,35 +25,35 @@ const adminList = [
           noCache: true,
           affix: true
         }
-      },
-      {
-        path: 'workplace',
-        component: 'views/Dashboard/Workplace',
-        name: 'Workplace',
-        meta: {
-          title: 'router.workplace',
-          noCache: true,
-          affix: true
-        }
       }
+      // {
+      //   path: 'workplace',
+      //   component: 'views/Dashboard/Workplace',
+      //   name: 'Workplace',
+      //   meta: {
+      //     title: 'router.workplace',
+      //     noCache: true,
+      //     affix: true
+      //   }
+      // }
     ]
   },
-  {
-    path: '/external-link',
-    component: '#',
-    meta: {},
-    name: 'ExternalLink',
-    children: [
-      {
-        path: 'https://element-plus-admin-doc.cn/',
-        name: 'DocumentLink',
-        meta: {
-          title: 'router.document',
-          icon: 'clarity:document-solid'
-        }
-      }
-    ]
-  },
+  // {
+  //   path: '/external-link',
+  //   component: '#',
+  //   meta: {},
+  //   name: 'ExternalLink',
+  //   children: [
+  //     {
+  //       path: 'https://element-plus-admin-doc.cn/',
+  //       name: 'DocumentLink',
+  //       meta: {
+  //         title: 'router.document',
+  //         icon: 'clarity:document-solid'
+  //       }
+  //     }
+  //   ]
+  // },
   {
     path: '/guide',
     component: '#',
@@ -764,7 +764,7 @@ const menus = [
           status: Mock.Random.integer(0, 1),
           id: 2,
           meta: {
-            title: '分析页',
+            title: '首页',
             noCache: true
           }
         },
@@ -992,7 +992,7 @@ const menus = [
           status: Mock.Random.integer(0, 1),
           id: 2,
           meta: {
-            title: '分析页',
+            title: '首页',
             noCache: true
           }
         },

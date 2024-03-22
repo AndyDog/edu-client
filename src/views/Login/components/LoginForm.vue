@@ -262,6 +262,70 @@ const signIn = async () => {
   })
 }
 
+let menus = [
+  [
+    {
+      path: '/dashboard',
+      component: '#',
+      redirect: '/dashboard/analysis',
+      name: 'Dashboard',
+      id: 1,
+      meta: {
+        title: '首页',
+        icon: 'ant-design:dashboard-filled',
+        alwaysShow: true
+      }
+    },
+    {
+      path: '/external-link',
+      component: '#',
+      meta: {
+        title: '文档',
+        icon: 'clarity:document-solid'
+      },
+      name: 'ExternalLink',
+      id: 4
+    },
+    {
+      path: '/level',
+      component: '#',
+      redirect: '/level/menu1/menu1-1/menu1-1-1',
+      name: 'Level',
+      id: 6,
+      meta: {
+        title: '菜单',
+        icon: 'carbon:skill-level-advanced'
+      }
+    },
+    {
+      path: '/example',
+      component: '#',
+      redirect: '/example/example-dialog',
+      name: 'Example',
+      id: 12,
+      meta: {
+        title: '综合示例',
+        icon: 'ep:management',
+        alwaysShow: true
+      }
+    }
+  ],
+  [
+    {
+      path: '/dashboard',
+      component: '#',
+      redirect: '/dashboard/analysis',
+      name: 'Dashboard',
+      id: 1,
+      meta: {
+        title: '首页',
+        icon: 'ant-design:dashboard-filled',
+        alwaysShow: true
+      }
+    }
+  ]
+]
+// userStore.setRoleRouters(menus)
 // 获取角色信息
 const getRole = async () => {
   const formData = await getFormData<UserType>()
@@ -273,6 +337,9 @@ const getRole = async () => {
       ? await getAdminRoleApi(params)
       : await getTestRoleApi(params)
   if (res) {
+    console.log(res)
+    // const routers = menus
+    // res.data || []
     const routers = res.data || []
     userStore.setRoleRouters(routers)
     appStore.getDynamicRouter && appStore.getServerDynamicRouter

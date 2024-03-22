@@ -132,7 +132,7 @@ export default {
     menu12: '菜单1-2',
     menu2: '菜单2',
     dashboard: '首页',
-    analysis: '分析页',
+    analysis: '首页',
     workplace: '工作台',
     guide: '引导',
     component: '组件',
